@@ -3,6 +3,7 @@ name: Ping Render Server
 on:
   schedule:
     - cron: "*/27 * * * *"  # Cada 26 minutos
+  workflow_dispatch:  # Permite ejecutarlo manualmente desde GitHub
 
 jobs:
   keep_alive:
