@@ -10,4 +10,4 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Hacer petición al servidor
-        run: curl -s -o /dev/null -w "%{http_code}" https://murci.onrender.com
+        run: curl -s -o /dev/null -w "%{http_code}" https://murci.onrender.com/keep_alive
