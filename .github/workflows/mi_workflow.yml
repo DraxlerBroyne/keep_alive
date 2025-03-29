@@ -1,0 +1,12 @@
+name: Ping Render Server
+
+on:
+  schedule:
+    - cron: "*/27 * * * *"  # Cada 26 minutos
+
+jobs:
+  keep_alive:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Hacer petición al servidor
+        run: curl -s -o /dev/null -w "%{http_code}" https://murci.onrender.com
